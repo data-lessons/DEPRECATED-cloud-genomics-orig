@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction3"
 teaching: 0
 exercises: 0
 questions:
@@ -21,9 +21,9 @@ objectives:
 
 function setClassDisplayMode(className, displayValue){
     var classList = document.getElementsByClassName(className);
-    for (let oneItem of classList) {
-        oneItem.style.display = displayValue;
-    }
+    classList.map( function(oneItem){
+        oneItem.style.display = displayValue; 
+    });
 }
 
 function set_page_view_defaults() {

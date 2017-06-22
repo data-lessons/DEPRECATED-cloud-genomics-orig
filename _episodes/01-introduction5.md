@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction5"
 teaching: 0
 exercises: 0
 questions:
@@ -21,9 +21,13 @@ objectives:
 
 function setClassDisplayMode(className, displayValue){
     var classList = document.getElementsByClassName(className);
-    classList.map( function(oneItem){
-        oneItem.style.display = displayValue; 
-    });
+    if (classList.length == 0) {
+        alert("Error: Bad class name ",className," sent to 'setClassDisplayMode()' script!");
+    } else {
+        for (var index = 0; index < classList.length; ++index) {
+            classList[index].style.display = displayValue;
+        }
+    }
 }
 
 function set_page_view_defaults() {
